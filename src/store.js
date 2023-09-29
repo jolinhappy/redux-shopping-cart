@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import shoppingCartReducer from './slices/shoppingCart';
-
+import productsDataReducer from "./slices/productsData";
 const store = configureStore({
   reducer: {
     shoppingCartReducer,
-  }
+    // 把productsDataReducer也加上
+    productsDataReducer,
+  },
 });
 
 export default store;
